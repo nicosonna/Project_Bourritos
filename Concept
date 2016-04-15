@@ -48,4 +48,4 @@ Exemple de Chaine envoyée via sms, l'arduino au sol décortiquera cette chaine 
 Une fois cette opération faite l'arduino renverras via un POST par exemple sur un server Web les variables 
 
 
-Quentin à toi de definir une méthode pour la réception des données
+@negus1309 à toi de definir une méthode pour la réception des données
