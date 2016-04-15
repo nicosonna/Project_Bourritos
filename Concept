@@ -1,0 +1,51 @@
+################################################################################################
+#
+#
+#         Project Bourritos 
+#       
+#         Concepte de fonctionnement
+#
+################################################################################################
+
+
+
+#####################                             ###############################################
+#                   #                             #     SMS to IP                               #
+#   Ballon          #     SMS                     #                                             #
+# gps gsm           # ------------------------->  #   Convertion d'un sms reçus sur une         #
+#   divers capteurs #                             #   interphace IP                             #
+#                   #                             #                                             #
+#####################                             ##############################################
+
+
+
+Le concepte pour l'envoie de datta sera le sms.
+Un sms peut être envoyé avec une portée plus longue que via la 3G. A savoir que le sms est un petit paquet de données envoyé et que la porteuse utilisée
+Peu varier de 900Mhz à 2.4 Ghz.
+Le 900Mhz étant une fréquence basse il aura une plus longue portée et moin senssible aux obstacles.
+
+
+
+Définition des paquet de données envoyé de la nacelle au Webserver
+
+- température intérieur
+- température extérieur
+- altitude
+- longitude
+- latitude
+(-signale gms)
+(-vitesse)
+(-Flage system_OK)
+
+
+Définition de la chaine envoyée depuis la nacelle.
+
+température intérieur;température extérieur,Altitude;Longitude;Latitude; (NULL)
+
+Exemple de Chaine envoyée via sms, l'arduino au sol décortiquera cette chaine de caractère pour la réinjecter dans diverses variables
+23.6;22;20.2545;56.3245;789;22.563;42.2365; 0
+
+Une fois cette opération faite l'arduino renverras via un POST par exemple sur un server Web les variables 
+
+
+Quentin à toi de definir une méthode pour la réception des données
